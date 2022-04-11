@@ -1,0 +1,43 @@
+fileFormatVersion: 2
+guid: cadf60320c8f6456db6860db711a38e1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SauceCodePro Nerd Font
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f68ebe7e619d04bb1af20b7185d5e252, type: 3}
+  - {fileID: 12800000, guid: f21360555ae5343ffbf48eb8471d7dee, type: 3}
+  - {fileID: 12800000, guid: 0083e4efaef0f4d898aaa8704ef8bdf4, type: 3}
+  - {fileID: 12800000, guid: b853b065bbb2b4cd8b260aef6a3191fd, type: 3}
+  - {fileID: 12800000, guid: d7a8656815fb441a5b3e613b7e33654b, type: 3}
+  - {fileID: 12800000, guid: b6ad2fcc1db6e4a8cadf0fcc6cf9c5fb, type: 3}
+  - {fileID: 12800000, guid: e05b9b6d473c744ee82e9fe8950907ed, type: 3}
+  - {fileID: 12800000, guid: 6c318d8e400da425384b4d8866297532, type: 3}
+  - {fileID: 12800000, guid: 58380dd7ae7304d77ac2de44214a72fc, type: 3}
+  - {fileID: 12800000, guid: 85bb6d21cec3a4986adbaecbe009f439, type: 3}
+  - {fileID: 12800000, guid: 199c473ea2b7040038aa58f9365a16bf, type: 3}
+  - {fileID: 12800000, guid: fcae28b2925994242952d101ee35d580, type: 3}
+  - {fileID: 12800000, guid: 234d78fa68c10488d83905d58f60c987, type: 3}
+  - {fileID: 12800000, guid: 8109c9429310f423c93433e2cdef05da, type: 3}
+  - {fileID: 12800000, guid: 04392254887194dfc834e6c2c8f1452e, type: 3}
+  - {fileID: 12800000, guid: 3691070d398fd473b968687d086437f6, type: 3}
+  - {fileID: 12800000, guid: e45635d0e54d9412da1f48af912cedd1, type: 3}
+  - {fileID: 12800000, guid: b341a013b4c4a41758f47b93d95aa234, type: 3}
+  - {fileID: 12800000, guid: a688517b38665455aaf0e87f01b011b7, type: 3}
+  - {fileID: 12800000, guid: 39ac39a0b632644dc842801b56886a07, type: 3}
+  - {fileID: 12800000, guid: b6bc095a9836a437aaf714481caceff2, type: 3}
+  - {fileID: 12800000, guid: 22600e3a68c39486c951252cf3f89e47, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

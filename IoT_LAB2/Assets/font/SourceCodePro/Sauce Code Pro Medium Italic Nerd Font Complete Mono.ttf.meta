@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 342fd859df19745ac953f7fc979e46bd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SauceCodePro Nerd Font Mono
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7a489b8a282874e6280ddf6715589a52, type: 3}
+  - {fileID: 12800000, guid: 297e71adfdfb5498a8bba7e66a65675f, type: 3}
+  - {fileID: 12800000, guid: cf3110ec3ce1a475ebdb3f49dae255b6, type: 3}
+  - {fileID: 12800000, guid: 81e53bfeaca17491babb0d630d130e9f, type: 3}
+  - {fileID: 12800000, guid: 03bc4a80d70644c1586b6b73578edabd, type: 3}
+  - {fileID: 12800000, guid: 2e99f9b0df85847feb1707bb79e86f5c, type: 3}
+  - {fileID: 12800000, guid: 8d0afaf9992cb443483617afdf355c5f, type: 3}
+  - {fileID: 12800000, guid: 336c11efb72354048b62dfe4db5a0b42, type: 3}
+  - {fileID: 12800000, guid: cb835e7dd89734514b0db858afc6575b, type: 3}
+  - {fileID: 12800000, guid: 307a57aa8647249adb3f59dbb4d8acf5, type: 3}
+  - {fileID: 12800000, guid: 2d44ad0e625724edfaac45012280d668, type: 3}
+  - {fileID: 12800000, guid: e3a5d486c6e224150b54f042c1121678, type: 3}
+  - {fileID: 12800000, guid: a26613bbbefb844329c28b7ce1a8d1d1, type: 3}
+  - {fileID: 12800000, guid: 357cc350e5217413f9ec55e6d44dd9ed, type: 3}
+  - {fileID: 12800000, guid: 6d031280c7db94946af9a9827182c64a, type: 3}
+  - {fileID: 12800000, guid: 68b7c928f3f6e4202be999b515069f67, type: 3}
+  - {fileID: 12800000, guid: 04b19d73fa37e43f48da2e0979648306, type: 3}
+  - {fileID: 12800000, guid: 0a565fe72b9d44a8bb62afe82ee2b1eb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

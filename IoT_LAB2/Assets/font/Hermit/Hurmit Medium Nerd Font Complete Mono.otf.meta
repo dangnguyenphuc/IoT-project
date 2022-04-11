@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 87435c46a9e084da694986550c503480
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hurmit Nerd Font Mono
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2ba5ef0cf7b8248109f7482c7db48e42, type: 3}
+  - {fileID: 12800000, guid: 094ec4983c2384714a619a2b9c971147, type: 3}
+  - {fileID: 12800000, guid: 2b4c72f91198043b7b7148e0d6ecc5c2, type: 3}
+  - {fileID: 12800000, guid: c4037ac84e8d443b3a4f3f940b145b58, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: d0d17784e062c444bab17b12d4af3e83
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hack Nerd Font
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 52432849a9fd946edb0db58b082e33a6, type: 3}
+  - {fileID: 12800000, guid: 401d68896425a4f3fbe5a9a38e2112e2, type: 3}
+  - {fileID: 12800000, guid: a68b3d7c34c6e42698fcd181a9192f3f, type: 3}
+  - {fileID: 12800000, guid: 1cd8c9008d4054ca4ad4062404acc8fd, type: 3}
+  - {fileID: 12800000, guid: ea71a9f53e3844422810fc9f222370cb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
