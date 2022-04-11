@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e36dfebab0f544d79bfee6c2de5a8531
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ubuntu Nerd Font
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 91c1b9a2e1c0e4b35878aabc1b7bd40d, type: 3}
+  - {fileID: 12800000, guid: 131234502151d452680054683451230e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
