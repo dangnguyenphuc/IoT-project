@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{32713705-82DB-DDB8-ADCF-E28E09F303FC}</ProjectGuid>
+    <ProjectGuid>{DA310C6E-E896-F2C8-FF27-73AEB71D4D4B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,6 +53,9 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets/CodeMonkey/Utils/Button_UI.cs" />
     <Compile Include="Assets/CodeMonkey/Utils/World_Mesh.cs" />
     <Compile Include="Assets/Scripts/Window_Graph.cs" />
@@ -72,11 +75,11 @@
     <Compile Include="Assets/CodeMonkey/Utils/UI_Bar.cs" />
     <Compile Include="Assets/Scripts/Manager.cs" />
     <Compile Include="Assets/CodeMonkey/MonoBehaviours/ComponentActions.cs" />
+    <Compile Include="Assets/Scripts/Pump_Switch.cs" />
     <Compile Include="Assets/CodeMonkey/Utils/UI_Sprite.cs" />
     <Compile Include="Assets/CodeMonkey/Utils/UI_BarMultiple.cs" />
     <Compile Include="Assets/CodeMonkey/CMDebug.cs" />
     <Compile Include="Assets/CodeMonkey/Utils/FunctionPeriodic.cs" />
-    <Compile Include="Assets/Scripts/Pump_Switch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/CodeMonkey/README.txt" />
@@ -748,7 +751,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{C7CB9B39-74CF-2556-AACB-E45279D706CF}</Project>
+      <Project>{FD2573C9-75DD-F129-3F6F-7D3EBAB70472}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

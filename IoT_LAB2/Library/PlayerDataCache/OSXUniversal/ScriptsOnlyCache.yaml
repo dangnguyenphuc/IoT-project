@@ -1,7 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-firstpass.dll:
-    - M2MqttUnity.Examples.M2MqttUnityTest
+    Assembly-CSharp.dll:
+    - CodeMonkey.Assets
+    - my_mqtt.LED_Switch
+    - my_mqtt.Manager
+    - my_mqtt.Recv_mess
+    - my_mqtt.Window_Graph
+    DOTween.dll:
+    - DG.Tweening.Core.DOTweenSettings
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -15,9 +21,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.CollabProxy.Editor.dll:
-    - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
-    - Unity.Cloud.Collaborate.UserInterface.WindowCache
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.Timeline.Editor.dll:
@@ -35,9 +38,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
-    - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/Plugins/M2MQTT/M2MqttUnity/Examples/Scenes/M2MqttUnity_Test.unity:
+    Assets/Scenes/Scene1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -55,28 +57,34 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 7142}
+      Script: {instanceID: 1564}
     - Class: 114
-      Script: {instanceID: 7264}
+      Script: {instanceID: 2130}
     - Class: 114
-      Script: {instanceID: 7858}
+      Script: {instanceID: 2332}
     - Class: 114
-      Script: {instanceID: 8280}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 8450}
+      Script: {instanceID: 2468}
     - Class: 114
-      Script: {instanceID: 8680}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 8738}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 8926}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 9046}
+      Script: {instanceID: 3250}
     - Class: 114
-      Script: {instanceID: 30432}
+      Script: {instanceID: 3310}
+    - Class: 114
+      Script: {instanceID: 3516}
+    - Class: 114
+      Script: {instanceID: 3642}
+    - Class: 114
+      Script: {instanceID: 4134}
+    - Class: 114
+      Script: {instanceID: 5168}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 124
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -92,7 +100,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 850595691
+    - Class: 225
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -119,6 +127,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkin
+  - hash:
+      serializedVersion: 2
+      Hash: a2b249e27e25a975ba9d3c9b8e130910
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.Utils
+    className: Button_UI
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -175,6 +189,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 4ae5b67f312d2eb54e8bd08403c48989
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: my_mqtt
+    className: Window_Graph
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -193,6 +213,12 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 75cbcb867ed0d3dbe835e8a29dca6e03
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: my_mqtt
+    className: Recv_mess
+  - hash:
+      serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -205,6 +231,12 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
+      Hash: a7628061a71f63c83d3234f7194522dc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: my_mqtt
+    className: LED_Switch
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -215,6 +247,30 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: IKManager2D
+  - hash:
+      serializedVersion: 2
+      Hash: fa653120b8e2e20f2e5fa15091afeb95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.Utils
+    className: Button_Sprite
+  - hash:
+      serializedVersion: 2
+      Hash: 5b1d3232bdaba52e260d32a9eb24296b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.MonoBehaviours
+    className: CameraFollowSetup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.MonoBehaviours
+    className: CameraFollow
+  - hash:
+      serializedVersion: 2
+      Hash: e4bdd198714ebacf1ebef1367327eff4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey
+    className: Assets
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -257,6 +313,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 05cede3f915399cac147f9e5eea79328
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.MonoBehaviours
+    className: PositionRendererSorter
+  - hash:
+      serializedVersion: 2
+      Hash: 4286f618edbfb5e35f0fcaea89434e1b
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: M2MqttUnity
+    className: M2MqttUnityClient
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -383,6 +451,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 704dcd31abc789439bc3f3cd10b58c2b
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 9b2663563359a91d0a6867fee160c936
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -535,9 +615,9 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e1431cff11f8be6de2822fd0085c06e0
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: my_mqtt
     className: Manager
   - hash:
       serializedVersion: 2
@@ -545,6 +625,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.MonoBehaviours
+    className: ComponentActions
+  - hash:
+      serializedVersion: 2
+      Hash: 110a3abf6d8d3fbb47d0a30cebf7bba3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: my_mqtt
+    className: Pump_Switch
   - hash:
       serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
@@ -611,19 +703,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 4286f618edbfb5e35f0fcaea89434e1b
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: M2MqttUnity
-    className: M2MqttUnityClient
-  - hash:
-      serializedVersion: 2
-      Hash: 12d0acaac10d540dce2ac7e92c41f157
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: M2MqttUnity.Examples
-    className: M2MqttUnityTest
   platform: 2
   scenePathNames:
-  - Assets/Plugins/M2MQTT/M2MqttUnity/Examples/Scenes/M2MqttUnity_Test.unity
-  playerPath: /Users/phucdang/Desktop/Document/iot/unity_project/Lab2/testbk.app
+  - Assets/Scenes/Scene1.unity
+  playerPath: "/Users/phucdang/Documents/Document/iot/IoT_LAB/code_manager/2012968_Nguy\u1EC5n
+    Ph\xFAc \u0110\u0103ng.app"
