@@ -10,27 +10,57 @@ mess = ""
 
 #TODO: Add your token and your comport
 THINGS_BOARD_ACCESS_TOKEN = "ck8JDMcFi3S0ZG7D4UGp"
-bbc_port = "/dev/cu.usbmodem142202"
+
+
+def get_port():
+    ports = serial.tools.list_ports.comports()
+    res = ""
+    for i in range(len(ports)):
+        strPort = str(ports[i])
+        if "BBC micro:bit" in strPort:
+            port = strPort.split(" ")
+            res = port[0]
+    return res
+# TODO: get_port()
+collect_data = {
+            'temperature': 0,
+            'light': 0
+}
+_DATA = {
+            'TE': 'temperature',
+            'LI': 'light',
+}
+_METHOD = {
+    'setLED': 'LED1',
+    'setFAN': 'FAN1',
+    'setLED2': 'LED2',
+    'setFAN2': 'FAN2',
+}
+bbc_port = get_port() # FIXME: declare port
 
 if len(bbc_port) > 0:
     ser = serial.Serial(port=bbc_port, baudrate=115200)
 
 def processData(data):
+    global collect_data,_DATA
     data = data.replace("!", "")
     data = data.replace("#", "")
     splitData = data.split(":")
     print(splitData)
-    #TODO: Add your source code to publish data to the server
 
-    if splitData[1] == 'TEMP':
-        temp = int(splitData[2])
-        collect_data = {'temperature': temp}
-        client.publish('v1/devices/me/telemetry', json.dumps(collect_data), 1)
+    collect_data[_DATA[splitData[1]]] = int(splitData[2])
 
-    if splitData[1] == 'LIGHT':
-        light = int(splitData[2])
-        collect_data = {'light': light}
-        client.publish('v1/devices/me/telemetry', json.dumps(collect_data), 1)
+def writeSerial(rc_data):
+    if rc_data['method'] == 'setLED':
+        data = f"{1 if rc_data['params'] else 0}#"
+    elif rc_data['method'] == 'setFAN':
+        data = f"{3 if rc_data['params'] else 2}#"
+    elif rc_data['method'] == 'setLED2':
+        data = f"{5 if rc_data['params'] else 4}#"
+    elif rc_data['method'] == 'setFAN2':
+        data = f"{7 if rc_data['params'] else 6}#"
+    print("Sent data: " + data)
+    ser.write(data.encode())
 
 def readSerial():
     bytesToRead = ser.inWaiting()
@@ -40,42 +70,39 @@ def readSerial():
         while ("#" in mess) and ("!" in mess):
             start = mess.find("!")
             end = mess.find("#")
-            processData(mess[start:end + 1])
+            try:
+                processData(mess[start:end + 1])
+            except:
+                pass
             if (end == len(mess)):
                 mess = ""
             else:
                 mess = mess[end+1:]
+        return True
 
 
 def subscribed(client, userdata, mid, granted_qos):
     print("Subscribed...")
 
+
+
 def recv_message(client, userdata, message):
     print("Received: ", message.payload.decode("utf-8"))
-    temp_data = {'valueLED': True,'valueFAN': True}
-    cmd = -1
-    #TODO: Update the cmd to control 2 devices
+    temp_data = {'value': True}
     try:
         jsonobj = json.loads(message.payload)
-        if jsonobj['method'] == "setLED":
-            temp_data['valueLED'] = jsonobj['params']
-            if temp_data['valueLED']==True:
-                cmd = 1
-            else:
-                cmd = 0
-            client.publish('v1/devices/me/LED Controller', json.dumps(temp_data), 1)
-        if jsonobj['method'] == "setFAN":
-            temp_data['valueFAN'] = jsonobj['params']
-            if temp_data['valueFAN'] == True:
-                cmd = 3
-            else:
-                cmd = 2
-            client.publish('v1/devices/me/FAN Controller', json.dumps(temp_data), 1)
+        temp_data['value'] = jsonobj['params']
+        if jsonobj['method'] == 'setLED':
+            client.publish('v1/devices/me/LED1', json.dumps(temp_data), 1)
+        if jsonobj['method'] == 'setLED2':
+            client.publish('v1/devices/me/LED2', json.dumps(temp_data), 1)
+        if jsonobj['method'] == 'setFAN':
+            client.publish('v1/devices/me/FAN1', json.dumps(temp_data), 1)
+        if jsonobj['method'] == 'setFAN2':
+            client.publish('v1/devices/me/FAN2', json.dumps(temp_data), 1)
+        writeSerial(jsonobj)
     except:
         pass
-
-    if len(bbc_port) > 0:
-        ser.write((str(cmd) + "#").encode())
 
 def connected(client, usedata, flags, rc):
     if rc == 0:
@@ -97,9 +124,6 @@ client.on_message = recv_message
 
 while True:
 
-    if len(bbc_port) >  0:
-        readSerial()
+    if readSerial():
+        client.publish('v1/devices/me/telemetry', json.dumps(collect_data), 1)
     time.sleep(1)
-
-
-
